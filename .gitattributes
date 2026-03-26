@@ -1,0 +1,50 @@
+# ========================================
+# Default: Auto-normalize line endings
+# ========================================
+* text=auto
+
+# ========================================
+# Gradle Wrapper - for cross-OS compatibility
+# ========================================
+# Unix shell script
+gradlew          text eol=lf
+
+# Windows batch script
+gradlew.bat      text eol=crlf
+
+# Gradle wrapper jar
+gradle/wrapper/gradle-wrapper.jar   binary
+
+# ========================================
+# Source code and text files (Kotlin, Gradle, config)
+# ========================================
+*.kt             text
+*.kts            text   # Kotlin Gradle scripts (build.gradle.kts, settings.gradle.kts)
+*.gradle         text
+*.properties     text
+*.xml            text
+*.json           text
+*.yml            text
+*.yaml           text
+
+# ========================================
+# Scripts
+# ========================================
+*.sh             text eol=lf     # Any shell scripts
+*.bat            text eol=crlf
+*.cmd            text eol=crlf
+
+# ========================================
+# Binary files
+# ========================================
+*.png            binary
+*.jpg            binary
+*.jpeg           binary
+*.gif            binary
+*.ico            binary
+*.jar            binary
+*.aar            binary
+*.apk            binary
+*.aab            binary
+*.dex            binary
+*.so             binary
