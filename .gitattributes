@@ -1,50 +1,49 @@
-# ========================================
-# Default: Auto-normalize line endings
-# ========================================
-* text=auto
+# Java sources
+*.java          text diff=java
+*.kt            text diff=kotlin
+*.groovy        text diff=java
+*.scala         text diff=java
+*.gradle        text diff=java
+*.gradle.kts    text diff=kotlin
 
-# ========================================
-# Gradle Wrapper - for cross-OS compatibility
-# ========================================
-# Unix shell script
-gradlew          text eol=lf
+# These files are text and should be normalized (Convert crlf => lf)
+*.css           text diff=css
+*.scss          text diff=css
+*.sass          text
+*.df            text
+*.htm           text diff=html
+*.html          text diff=html
+*.js            text
+*.mjs           text
+*.cjs           text
+*.jsp           text
+*.jspf          text
+*.jspx          text
+*.properties    text
+*.tld           text
+*.tag           text
+*.tagx          text
+*.xml           text
 
-# Windows batch script
-gradlew.bat      text eol=crlf
+# These files are binary and should be left untouched
+# (binary is a macro for -text -diff)
+*.class         binary
+*.dll           binary
+*.ear           binary
+*.jar           binary
+*.so            binary
+*.war           binary
+*.jks           binary
 
-# Gradle wrapper jar
-gradle/wrapper/gradle-wrapper.jar   binary
+# Common build-tool wrapper scripts ('.cmd' versions are handled by 'Common.gitattributes')
+mvnw            text eol=lf
+gradlew         text eol=lf
 
-# ========================================
-# Source code and text files (Kotlin, Gradle, config)
-# ========================================
-*.kt             text
-*.kts            text   # Kotlin Gradle scripts (build.gradle.kts, settings.gradle.kts)
-*.gradle         text
-*.properties     text
-*.xml            text
-*.json           text
-*.yml            text
-*.yaml           text
+# These are explicitly windows files and should use crlf
+*.bat           text eol=crlf
 
-# ========================================
-# Scripts
-# ========================================
-*.sh             text eol=lf     # Any shell scripts
-*.bat            text eol=crlf
-*.cmd            text eol=crlf
+# Apply override to all files in the directory
+*.md linguist-detectable
 
-# ========================================
-# Binary files
-# ========================================
-*.png            binary
-*.jpg            binary
-*.jpeg           binary
-*.gif            binary
-*.ico            binary
-*.jar            binary
-*.aar            binary
-*.apk            binary
-*.aab            binary
-*.dex            binary
-*.so             binary
+# Apply override to all files in the directory
+*.md linguist-detectable
